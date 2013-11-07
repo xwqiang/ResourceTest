@@ -51,6 +51,9 @@ public class PropUtil {
 		/**
 		 * 可以深入jar包进行文件查找
 		 */
+		String s= PropUtil.class.getResource("/"+PropUtil.class.getName().replace(".", "/")+".class").getFile();
+		System.out.println(s);
+		System.out.println(System.getProperty("user.dir"));
 		System.out.println(PropUtil.class.getClassLoader().getResource("com/test/util/db.properties"));
 		System.out.println(PropUtil.class.getResource("/db1.properties"));
 		PropUtil.load1();
